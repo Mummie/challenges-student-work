@@ -27,7 +27,18 @@
     </p>
     <p>
         <?php
+            $words = array('ChRis Carter', 'John Stamos', 'John Carter', 'John Mayer', 'John Oliver');
+            $amount = rand(0,count($words)-1);
+            $selection = $words[$amount];
+            
             // Write your own using clean_then_call and a closure to manipulate the string further
+            echo '</br>';
+            echo clean_then_call($selection, function($name){
+                $name = strtoupper(strrev($name));
+               
+                $name = str_replace(array('A','B','C'),array('#g2v','*(med','98p43d@'), $name);
+                return $name;
+            });
         ?>
     </p>
   </body>

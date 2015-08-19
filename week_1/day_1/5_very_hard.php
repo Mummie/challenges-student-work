@@ -8,14 +8,20 @@
 
 <?php
   $packagesArray = array(
-    array('name' => 'Package 1', 'price' => 5.99),
-    array('name' => 'Package 2', 'price' => 3.01),
-    array('name' => 'Package 3', 'price' => 100.01),
-    array('name' => 'Package 4', 'price' => 11.00),
-    array('name' => 'Package 5', 'price' => 25.95),
-    array('name' => 'Package 6', 'price' => 10.99),
-    array('name' => 'Package 7', 'price' => 11.00),
+    array('name' => 'Package 1 ', 'price' => 5.99),
+    array('name' => 'Package 2 ', 'price' => 3.01),
+    array('name' => 'Package 3 ', 'price' => 100.01),
+    array('name' => 'Package 4 ', 'price' => 11.00),
+    array('name' => 'Package 5 ', 'price' => 25.95),
+    array('name' => 'Package 6 ', 'price' => 10.99),
+    array('name' => 'Package 7 ', 'price' => 11.00),
   );
+  foreach($packagesArray as $package => $row) {
+    $name[$package]  = $row['name'];
+    $price[$package] = $row['price'];
+  }
+  array_multisort($price, SORT_ASC, $packagesArray);
+  
 ?>
 <!DOCTYPE html>
 <html>

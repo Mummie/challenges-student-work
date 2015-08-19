@@ -19,9 +19,15 @@
 <head></head>
 <body>
 <p>
-	<?php
+		<?php
 
-		// code goes here ...
+		for($i = 1; $i <= 12; $i++){
+			$monthName = date("F", strtotime("2015-$i-1"));
+			if(stripos($monthName, "J") === 0){
+				echo $i . " - " . $monthName . " - " . strlen($monthName). "<br/>";
+			}
+			
+		}
 
 
 	?>

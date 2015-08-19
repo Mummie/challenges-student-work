@@ -28,8 +28,19 @@
           	 'September',
           	 'November'
           	];
-
-          	// code goes here ...
+          	$monthIncludeArray = [
+          	    'April',
+          	    'September',
+          	    'December'
+          	    ];
+            
+            if(in_array($monthIncludeArray, $monthExcludeArray)){
+            echo "Your array does include these months";
+            }
+            else {
+                echo "Your array does not include thse months";
+            }
+          	
           ?>
         </p>
 	</body>

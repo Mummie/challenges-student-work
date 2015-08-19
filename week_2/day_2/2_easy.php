@@ -11,6 +11,9 @@
   <body>
     <p>
         <?php
+            function add($num){
+                return array_sum($num);
+            }
             echo add(array(1,2,3,4,5));
         ?>
     </p>

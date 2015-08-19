@@ -26,8 +26,13 @@
         <p>
             <?php
 
-          	    // code goes here ...
-
+            do {
+                $num = rand(1,7);
+                echo $num . "<br/>";
+                
+            }while($num != 7);
+            
+            
             ?>
         </p>
 	</body>

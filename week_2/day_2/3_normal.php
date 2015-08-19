@@ -5,11 +5,11 @@
      *
      * Can you fix the code below so it works as expected?
      */
-    function ride($owner) {
+    function ride($owner){
         $rides = array('car', 'boat', 'bike');
-        for($i = 0, $i < count($rides), $i++) {
-            array_push($rides, $owner . "'s " . $rides[$i]);
-        }
+    
+            array_unshift($rides, $owner . "s ");
+        
         return $rides;
     }
 ?>

@@ -13,7 +13,7 @@
 	<body>
         <p>
           <?php
-          	$name = 'Eric'; // this came from the previous page as a post variable
+          	$name = 'Dakota'; // this came from the previous page as a post variable
 
           	// this came from the db
 			$nameToColorArray = [
@@ -26,9 +26,17 @@
 	          'Michael' => 'blue',
 	          'Derek' => 'purple',
 	          'Tru' => 'red',
+	          'Dakota' => 'yellow',
 	         ];
-
-	         // code goes here
+			if($nameToColorArray[$name]){
+				echo $nameToColorArray[$name];
+			}
+			else {
+				echo "Sorry the name is not in the database";
+			}
+				
+			
+	         
           ?>
         </p>
 	</body>

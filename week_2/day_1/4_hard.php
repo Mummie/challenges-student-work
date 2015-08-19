@@ -24,9 +24,35 @@
         <p>
 
             <?php
+            $threeArray = array();
+            $sixArray = array();
 
-
-                // code goes here ...
+			for($i = 1; $i <= 100; $i++){
+				$three = $i % 3;
+				$six = $i % 6;
+				if($three == 0){
+					array_push($threeArray, $i);
+				} 
+				if($six == 0){
+					array_push($sixArray, $i);
+				}			
+			}
+			echo "<pre>";
+                $comma3 = implode(",", $threeArray);
+                echo $comma3;
+                echo "</pre>";
+                echo "<pre>";
+                $comma6 = implode(",", $sixArray);
+                echo $comma6;
+                echo "</pre>";
+                $amount3 = count($threeArray);
+                $amount6 = count($sixArray);
+                echo "<pre>";
+                echo "Divisible by 3: " . $amount3;
+                echo "</pre>";
+                echo "<pre>";
+                echo "Divisible by 6: " . $amount6;
+                echo "</pre>";
 
             ?>
         </p>

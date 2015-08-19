@@ -11,7 +11,7 @@
   <head></head>
   <body>
         <p>
-          <?php
+           <?php
             $unOrderedArray = [
               'Joseph',
               'Lauren',
@@ -23,7 +23,12 @@
               'Tru',
               'Michael'
             ];
-
+              
+          sort($unOrderedArray);
+          print_r($unOrderedArray);
+          rsort($unOrderedArray);
+          
+          print_r($unOrderedArray);
           // code goes here...
           ?>
         </p>
