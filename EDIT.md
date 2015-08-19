@@ -63,5 +63,8 @@ just do something like...
 1. Check branch (Do not use parenthesis) (`git checkout (username)`) (username should be first initial and last name e.g. eschwartz)
 2. To save (`git add .`) 
 3. Commit work (`git commit -m “completed work”`) 
- 
+4. Submit (`git push completed-work`)
+5. You will be prompted for your GitHub username, enter it and hit enter
+6. You will be promted for your GitHub password, enter it and hit enter
+7. 
 and so on...
