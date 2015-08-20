@@ -40,7 +40,7 @@
         } 
     } 
     
-    class Item { 
+    class Item extends ShoppingCart { 
         public $name;
         public $price; 
     } 
