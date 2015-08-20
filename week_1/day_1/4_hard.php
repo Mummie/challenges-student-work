@@ -28,8 +28,22 @@
           	 'September',
           	 'November'
           	];
+          	
+            $myMonthArray = [ 
+                "April", 
+                "September", 
+                "December"
+            ];
+            
+            foreach($myMonthArray as $myMonth)
 
           	// code goes here ...
+          	if(in_array($myMonth, $monthExcludeArray)){ 
+          	    echo $myMonth . "<br/>"
+          	} else { 
+          	    echo "I don't want that month."; 
+          	} 
+          	
           ?>
         </p>
 	</body>

@@ -16,6 +16,7 @@
     array('name' => 'Package 6', 'price' => 10.99),
     array('name' => 'Package 7', 'price' => 11.00),
   );
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,10 +30,24 @@
           this for each loop will iterate over each item above and
           set $package as the inner array so we can have access to it directly
           this is appose to accessing them like so $packagesArray[0]['name'];
-         -->
-        <?php foreach ($packagesArray as $packageArray): ?>
+         --> 
+        <?php 
+        // this foreach loop makes rows and columnssssss ayyye 
+        
+          foreach ($packagesArray as $packageArray): ?>
           <tr><td><?=$packageArray['name']?></td><td><?=$packageArray['price']?></td></tr>
-        <?php endforeach ?>
+          
+        <?php endforeach;
+        
+        array_multisort($packagesArray, SORT_ASC); 
+        var_dump($packagesArray);
+        
+        ?>
+        <!-- 
+        I understand what this code is doing, but I don't know how to include the 
+        array_multisort function. Example #3 on php.net for the function makes a lot 
+        more sense to me than this and I'm not sure how to work with what I'm given.
+        -->
       </ul>
 	</body>
 </html>

@@ -14,7 +14,7 @@
         <?php
 
             // code goes here...
-
+            print_r(array_sum(range(1, 20))); 
 
         ?>
     </p>

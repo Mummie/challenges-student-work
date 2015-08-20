@@ -22,7 +22,14 @@
 	<?php
 
 		// code goes here ...
-
+		$months = range(1,12); 
+		
+		foreach($months as $month) { 
+			$name = date('F', strtotime("$month/01/2015"));
+			if(strpos($name, 'J') === 0) { 
+			echo "$month - $name - " . strlen($name) .  "<br />"; 
+		} 
+		} 
 
 	?>
 </p>

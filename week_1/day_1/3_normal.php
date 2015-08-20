@@ -29,6 +29,13 @@
 	         ];
 
 	         // code goes here
+	         if($nameToColorArray{$name}) { 
+	         	echo $nameToColorArray{$name}
+	         else { 
+	         	echo "Color is not found";
+	         } 
+	         
+	         
           ?>
         </p>
 	</body>

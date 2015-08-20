@@ -27,6 +27,26 @@
 
 
                 // code goes here ...
+                $divisbleByThree = array(); 
+                $alsoDivisibleBySix = array();
+                for($i = 1; $i <= 100; $i++) { 
+                	if($i%3 === 0) { 
+                		array_push($divisbleByThree, $i);
+                		// divisble by 3 
+                		if($i%6 === 0) { 
+                		array_push($alsoDivisibleBySix, $i);
+                		// divisble by 6 and 3
+                		} 
+                	} 
+                }
+                echo implode(', ', $divisbleByThree); 
+                echo '<br />'; 
+                echo implode(', ', $alsoDivisibleBySix);
+                echo '<br /><br />'; 
+                echo 'Divisible by 3: ' . count($divisbleByThree);
+                echo '<br />';
+                echo 'Divisible by 6: ' . count($alsoDivisibleBySix);
+                
 
             ?>
         </p>
