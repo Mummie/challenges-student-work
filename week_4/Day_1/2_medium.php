@@ -20,8 +20,30 @@
 
 
     ///////////////////////////
-    // Put your code here!
+    //  Put your code here!  //
     ///////////////////////////
+    
+    class ShoppingCart { 
+        public function addItem() {
+            $this->cart = $cart; 
+        } 
+        public function getCostBeforeTax() { 
+            
+            
+        } 
+        public function getTaxAmount() { 
+            $tax = 0.10; 
+            $this->getCostBeforeTax * $tax;
+        } 
+        public function getCostAfterTax() { 
+            
+        } 
+    } 
+    
+    class Item { 
+        public $name;
+        public $price; 
+    } 
 
 
     $cart = new ShoppingCart();
@@ -35,8 +57,3 @@
     echo "<p>Total cost after tax: \${$cart->getCostAfterTax()}</p>";
 
     ?>
-
-</p>
-
-</body>
-</html>
