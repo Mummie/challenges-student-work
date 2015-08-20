@@ -25,13 +25,84 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
-
-
+    class Book {
+        public $name;
+        public $price;
+        
+        public function __construct($name, $price){
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function addTax() {
+            return (0);
+        }
+        
+    } 
+    class VideoGame {
+        public $name;
+        public $price;
+    
+        
+        public function __construct($name, $price){
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function addTax() {
+            return (.10);
+        }
+    } 
+    class DVD {
+        public $name;
+        public $price;
+    
+        
+        public function __construct($name, $price){
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function addTax() {
+            return (.05);
+        }
+        
+    } 
+    
+    
+    class ShoppingCart {
+        public $items = array();
+        protected $getCostBeforeTax;
+        protected $total_after_tax;
+        protected $tax;
+        
+        public function addItem($item){
+            $this->items[] = $item;
+        }
+        
+        function getCostBeforeTax(){
+            foreach($this->items as $item){
+                $this->total_before_tax += $item->price;
+            }
+            return $this->total_before_tax;
+        }
+        
+        function getTaxAmount(){
+            foreach($this->items as $item){
+                $this->tax += ($item->price)*($item->addTax());
+            }
+            return $this->tax;
+        }
+        
+        function getCostAfterTax(){
+            $this->total_after_tax = ($this->total_before_tax)+($this->tax);
+            return $this->total_after_tax;
+        }
+    }
+    
     $cart = new ShoppingCart();
     $cart->addItem(new Book('Cheap Book', 2.99));
     $cart->addItem(new Book('Expensive Book', 24.99));
     $cart->addItem(new DVD('Movie', 12.99));
     $cart->addItem(new VideoGame('Video Game', 59.99));
+    
 
     $beforeTax = number_format($cart->getCostBeforeTax(), 2);
     $taxAmount = number_format($cart->getTaxAmount(), 2);

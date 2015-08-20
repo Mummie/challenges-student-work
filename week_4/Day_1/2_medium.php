@@ -22,7 +22,41 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
-
+    class Item {
+        public$name;
+        public $price;
+        public function __construct($name, $price){
+            $this->name = $name;
+            $this->price = $price;
+        }
+    } 
+    
+    class ShoppingCart {
+        public $items = array();
+        protected $getCostBeforeTax;
+        protected $total_after_tax;
+        protected $tax;
+        public function addItem($item){
+            $this->items[] = $item;
+        }
+        function getCostBeforeTax(){
+            foreach($this->items as $item){
+                $this->total_before_tax += $item->price;
+            }
+            return $this->total_before_tax;
+        }
+        
+        function getTaxAmount(){
+            $this->tax = ($this->total_before_tax)*(.10);
+            return $this->tax;
+        }
+        
+        function getCostAfterTax(){
+            $this->total_after_tax = ($this->total_before_tax)+($this->tax);
+            return $this->total_after_tax;
+        }
+    }
+    
 
     $cart = new ShoppingCart();
     $cart->addItem(new Item('Cheap Book', 2.99));
@@ -30,6 +64,7 @@
     $cart->addItem(new Item('Movie', 12.99));
     $cart->addItem(new Item('Video Game', 59.99));
 
+    
     echo "<p>Total cost before tax: \${$cart->getCostBeforeTax()}</p>";
     echo "<p>Tax amount: \${$cart->getTaxAmount()}</p>";
     echo "<p>Total cost after tax: \${$cart->getCostAfterTax()}</p>";
