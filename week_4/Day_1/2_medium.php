@@ -28,7 +28,7 @@
             $this->cart = $cart; 
         } 
         public function getCostBeforeTax() { 
-            
+            $this->price;
             
         } 
         public function getTaxAmount() { 
@@ -43,6 +43,11 @@
     class Item extends ShoppingCart { 
         public $name;
         public $price; 
+        
+        public function __construct($name, $price) { 
+            $this->name = $name;
+            $this->price = $price;
+        } 
     } 
 
 
